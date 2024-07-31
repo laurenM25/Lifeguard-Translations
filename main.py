@@ -28,6 +28,7 @@ def findSpanishSuggestions(input):
     return translations.spanishMatches(keys)
 
 def main():
+    translations.get_API()
     question = askQuestion()
     suggestions = findSpanishSuggestions(question)
     print(suggestions)

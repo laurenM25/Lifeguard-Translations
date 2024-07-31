@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>Related Translations for {{input}}</title>
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Hello!</h1>
+    <p>"{{word}}" Related Translations: </p>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Term</th>
+                <th>Translation</th>
+            </tr>
+            {% for definition in definitions %}
+            <tr>
+                <td>{{definition}}</td>
+                <td>{{definitions.get(definition)}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+    {% if examples %}
+    <p> Example Sentences: </p>
+    {% endif %}
+
+    {% for example in examples %}
+    <p> {{example}} </p>
+    {% endfor %}
+    <form action="/translation">
+        <input type="text" name="word" id="word" placeholder="Translate another" />
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
