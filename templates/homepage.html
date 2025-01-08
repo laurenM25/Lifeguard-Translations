@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lifeguard Translate</title>
+    <link href="{{ url_for('static', filename='styles/general.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="page-heading">
+        <div class="left-section"></div>
+        <div class="page-title">
+            Lifeguard Translate
+        </div class="middle-section">
+        <div class="right-section"></div>
+    </div>
+    <div class="page-rows">
+        <div class="intro-row">
+            <p class="hello">Hello!</p>
+            <p class="explain-text">This is a website that helps lifeguards communicate with spanish-speaking patrons.
+            </p>
+        </div>
+        <div class="essentials-row">
+            <div class="vocab-essentials-box">
+                <p class="essentials-title">Lifeguard Essentials</p>
+                <div class="vocab-entry">
+                    <a href="/translation?word=nadar">
+                        <p>nadar</p>
+                    </a>
+                </div>
+                <div class="vocab-entry">
+                    <a href="/translation?word=piscina">
+                        <p>piscina</p>
+                    </a>
+                </div>
+                <div class="vocab-entry">
+                    <a href="/translation?word=ayuda">
+                        <p>ayuda</p>
+                    </a>
+                </div>
+                <div class="vocab-entry">
+                    <a href="/translation?word=correr">
+                        <p>correr</p>
+                    </a>
+                </div>
+                <div class="vocab-entry">
+                    <a href="/translation?word=cerrado">
+                        <p>cerrado</p>
+                    </a>
+                </div>
+            </div>
+            <div class="extra-essentials">
+            </div>
+            <div class="row-title-col">Learn the Essentials</div>
+        </div>
+        <div class="translate-row">
+            <div class="row-title-col">Get a quick translation</div>
+            <div class="extra-translate">
+
+            </div>
+            <div class="translate-bar">
+                <form action="fullTrans">
+                    <input class="search-bar" type="textbox" name="word" id="word" placeholder="Translate a sentence">
+                    <button class="search-button">
+                        <img class="search-icon" src="{{ url_for('static', filename='icons/search.svg') }}">
+                    </button>
+                </form>
+                <div class="search-icon"></div>
+            </div>
+        </div>
+        <div class="dictionary-row">
+            <div class="dictionary-search-box">
+                <form action="/translation">
+                    <input class="search-bar" type="textbox" name="word" id="word" placeholder="look up a word">
+                    <button class="submit-button" type="submit">
+                        <img class="pixelated-cursor-icon"
+                            src="{{ url_for('static', filename='icons/pixelated-cursor.png') }}">
+                    </button>
+                </form>
+            </div>
+            <div class="extra-dictionary">
+                <img class="lifeguard-drawing" src="{{ url_for('static', filename='icons/lifeguard-drawing.png') }}">
+            </div>
+            <div class="row-title-col">Look up a word</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

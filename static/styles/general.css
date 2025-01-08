@@ -1,0 +1,176 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgb(8, 8, 145);
+  padding-bottom: 8px;
+
+}
+
+.page-title {
+  color: white;
+  font-size: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-rows {
+  display: grid;
+  grid-template-rows: 150px 600px 600px 600px;
+}
+
+.intro-row {
+  background-color: white;
+  border-bottom-color: black;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+.hello {
+  font-size: 30px;
+  text-align: center;
+}
+
+.explain-text {
+  font-size: 20px;
+  text-align: center;
+}
+
+.essentials-row {
+  background-color: antiquewhite;
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+}
+
+.row-title-col {
+  font-size: 70px;
+  text-align: center;
+  margin-right: 8px;
+}
+
+.vocab-essentials-box {
+  background-color: black;
+  color: white;
+  height: 300px;
+  position: sticky;
+  top: 0px;
+}
+
+.essentials-title,
+.vocab-entry {
+  padding-left: 5px;
+  margin-left: 5px;
+}
+
+.vocab-entry p {
+  color: white;
+}
+
+.essentials-title {
+  font-size: 27px;
+}
+
+.vocab-entry {
+  font-size: 20px;
+}
+
+.translate-row {
+  background-color: rgb(255, 193, 193);
+  display: grid;
+  grid-template-columns: 450px 1fr 1fr;
+  padding-top: 80px;
+}
+
+.translate-bar {
+  position: sticky;
+  height: 50px;
+  top: 0px;
+}
+
+.search-bar {
+  margin-top: 50px;
+  padding-left: 10px;
+  font-size: 16px;
+  width: 300px;
+  height: 40px;
+  border-width: 1px;
+  border-style: solid;
+
+  border-color: rgb(204, 204, 204);
+  border-radius: 18px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-button {
+  height: 40px;
+  border-radius: 14px;
+  margin-left: -4px;
+}
+
+.search-icon {
+  height: 24px;
+}
+
+.dictionary-row {
+  background-color: rgb(148, 148, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr 450px;
+  padding-top: 80px;
+}
+
+.dictionary-search-box {
+  padding-left: 70px;
+}
+
+.dictionary-search-box .search-bar {
+  width: 150px
+}
+
+.submit-button {
+  background-color: transparent;
+  border-color: transparent;
+  width: 56px;
+  border-radius: 40px;
+  margin-left: -4px;
+}
+
+.pixelated-cursor-icon {
+  height: 40px;
+  width: 40px;
+  object-fit: fill;
+}
+
+.pixelated-cursor-icon:hover {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+  margin-left: -20px;
+  margin-bottom: -20px;
+}
+
+.lifeguard-drawing {
+  display: inline-block;
+  height: 1000px;
+  cursor: pointer;
+}
+
+.lifeguard-drawing:hover {
+  height: 1100px;
+}

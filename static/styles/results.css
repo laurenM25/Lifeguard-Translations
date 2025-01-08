@@ -1,0 +1,211 @@
+.page-rows,
+.translation-section,
+.return-home-section {
+    margin-left: 25px;
+}
+
+.completed-translation-section {
+    padding-left: 15px;
+}
+
+.request-display {
+    font-size: 25px;
+}
+
+.request-answer {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.answer-breakdown {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.word-pop {
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 7px;
+    position: relative;
+}
+
+.word-pop p {
+    display: inline-block;
+}
+
+.word-pop:hover {
+    font-size: 33px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dictionary-tip {
+    position: absolute;
+    background-color: grey;
+    color: white;
+    font-size: 18px;
+    opacity: 0;
+    transition: 0.12s;
+    pointer-events: none;
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.word-pop:hover .dictionary-tip {
+    opacity: 1;
+}
+
+.first-dict-entry {
+    width: 250px;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.dict-word {
+    font-size: 25px;
+}
+
+.dict-type {}
+
+
+
+.dict-def {
+    width: 250px;
+    display: block;
+    color: rgb(91, 3, 3);
+}
+
+.more-inquiries-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.more-inquiries-heading {}
+
+.next-action-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.look-up-dictionary {
+    padding-left: 15px;
+}
+
+.translate-another {}
+
+.translate-another .translate-bar {
+    position: static;
+}
+
+.return-home-section {}
+
+.return-home-button {
+    background-color: transparent;
+    background-image: url("../icons/lifeguard2.png");
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    width: 600px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.button-text {
+    background-color: darkred;
+    font-weight: bold;
+    font-size: 18px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.return-home-button:hover .button-text {
+    font-size: 22px;
+}
+
+.return-home-button:hover {
+    height: 1100px;
+    margin-top: -30px;
+}
+
+/* below styles are for translation.html only */
+
+.page-rows-dict {
+    display: grid;
+    grid-template-rows: 100px 3fr 2fr 4fr;
+}
+
+.dictionary-results {
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+
+.request-display,
+.example-sentences-title {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 10px;
+}
+
+.definitions-display {
+    background-color: lightgrey;
+}
+
+.example-sentences {
+    margin-left: 10px;
+}
+
+.dict-entry {
+    border-top-color: rgb(40, 24, 3);
+    border-bottom-color: rgb(40, 24, 3);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+
+    display: grid;
+    grid-template-columns: 100px 100px 1fr;
+
+    padding-left: 10px;
+}
+
+.term .word-type .word-definition {
+    display: inline-block;
+}
+
+.term {
+    font-weight: solid;
+    font-size: 25px;
+}
+
+.word-type {
+    color: rgb(49, 49, 49);
+    font-size: 20px;
+}
+
+.word-definition {
+    font-size: 20px;
+}
+
+.dictionary-results-sidebar {
+    margin-top: 40px;
+    background-color: aquamarine;
+}
+
+/* apologies for long code, here is style for suggestions.html*/
+
+.a-suggestion:hover {
+    font-weight: bold;
+}
+
+.suggestions {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, 
+    initial-scale=1.0">
+    <title>Translation full</title>
+    <link href="{{ url_for('static', filename='styles/general.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='styles/results.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="page-heading">
+        <div class="left-section"></div>
+        <div class="page-title">
+            Lifeguard Translate
+        </div class="middle-section">
+        <div class="right-section"></div>
+    </div>
+    <div class="page-rows">
+        <div class="extra-space"></div>
+        <div class="completed-translation-section">
+            <div class="request-display">Translation of "{{word}}"</div>
+            <div class="request-answer">{{fullTrans}}</div>
+            <div class="answer-breakdown">
+                {% for part in fullTransSplit %}
+                <div class="word-pop">
+                    <a href="/translation?word={{part}}">
+                        <p>{{part}}</p>
+                    </a>
+                    <div class="dictionary-tip">
+                        {% for variation in wordAndDefs[part] %}
+                        <div class="first-dict-entry">
+                            <p class="dict-word">
+                                {{variation[0]}}
+                            </p>
+                            <p class="dict-type">
+                                {{variation[1]}}
+                            </p>
+                            <p class="dict-def">
+                                {% for def in variation[2] %}
+                                {{def}};
+                                {% endfor %}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="more-inquiries-section">
+            <div class="more-inquiries-heading"></div>
+            <div class="next-action-row">
+                <div class="look-up-dictionary">
+                    Look at the dictionary.
+                    <div class="dictionary-search-box">
+                        <form action="/translation">
+                            <input class="search-bar" type="textbox" name="word" id="word" placeholder="look up a word">
+                            <button class="submit-button" type="submit">
+                                <img class="pixelated-cursor-icon"
+                                    src="{{ url_for('static', filename='icons/pixelated-cursor.png') }}">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="translate-another">
+                    Would you like to translate another sentence?
+                    <div class="translate-bar">
+                        <form action="fullTrans">
+                            <input class="search-bar" type="textbox" name="word" id="word"
+                                placeholder="Translate a sentence">
+                            <button class="search-button">
+                                <img class="search-icon" src="{{ url_for('static', filename='icons/search.svg') }}">
+                            </button>
+                        </form>
+                        <div class="search-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="return-home-section">
+            <form action="homepage">
+                <button class="return-home-button">
+                    <span class="button-text">return home</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
