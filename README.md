@@ -1,7 +1,7 @@
 # Lifeguard-Translations
 
 #### note:
-This is a work in progress. I began this project summer of 2024, inspired by my experiences lifeguarding at a pool with many spanish-speaking guests. I hope to bit-by-bit make this site a hub for essential vocabulary needed to communicate with pool patrons.
+This is a work in progress. I began this project summer of 2024, inspired by my experiences lifeguarding at a pool with many spanish-speaking guests. I returned to work on it January 2025. I hope to bit-by-bit make this site a hub for essential vocabulary needed to communicate with pool patrons.
 
 ### current features:
 Using merriam webster's spanish-english dictionary api and a google translate api, I provide translations and basic dictionary information for a user request. Sentences translated from english into spanish come with a pop up dictionary feature when the user hovers over each word of the sentence. 
