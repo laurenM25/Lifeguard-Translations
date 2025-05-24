@@ -67,9 +67,6 @@
     font-size: 25px;
 }
 
-.dict-type {}
-
-
 
 .dict-def {
     width: 250px;
@@ -78,11 +75,13 @@
 }
 
 .more-inquiries-section {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
+    background-color: rgb(61, 72, 131);
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 18px;
 }
-
-.more-inquiries-heading {}
 
 .next-action-row {
     display: grid;
@@ -93,13 +92,9 @@
     padding-left: 15px;
 }
 
-.translate-another {}
-
 .translate-another .translate-bar {
     position: static;
 }
-
-.return-home-section {}
 
 .return-home-button {
     background-color: transparent;
@@ -138,8 +133,10 @@
 /* below styles are for translation.html only */
 
 .page-rows-dict {
-    display: grid;
-    grid-template-rows: 100px 3fr 2fr 4fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .dictionary-results {
@@ -158,8 +155,16 @@
     background-color: lightgrey;
 }
 
+.example-sentences-title {
+    grid-row: 1;
+    grid-column: 1 / 5;
+}
+
 .example-sentences {
     margin-left: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
 }
 
 .dict-entry {
@@ -169,7 +174,7 @@
     border-bottom-width: 1px;
     border-top-style: solid;
     border-bottom-style: solid;
-
+    color: black;
     display: grid;
     grid-template-columns: 100px 100px 1fr;
 
